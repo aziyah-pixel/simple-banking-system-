@@ -1,0 +1,4 @@
+Enums/ – Tipe-tipe enumerasi status dan akun.
+Models/ – Representasi objek data (OOP).
+Services/ – Logika bisnis dan transaksi bank.  
+UI/ – Antarmuka terminal interaktif nasabah.
