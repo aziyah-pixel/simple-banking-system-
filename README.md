@@ -28,3 +28,14 @@ Sistem ini dibuat untuk mensimulasikan bagaimana sebuah bank memproses data nasa
 
 * **Bahasa Pemrograman:** C# (.NET Core / .NET Framework)
 * **Konsep Arsitektur:** Object-Oriented Programming (OOP) seperti *Encapsulation* untuk mengamankan data saldo, serta *Inheritance* untuk memisahkan jenis-jenis akun perbankan.
+
+---
+
+## 🚀 Cara Menjalankan Aplikasi
+
+1. Pastikan Anda telah menginstal **.NET SDK** (.NET 8, 9, atau 10).
+2. Buka terminal di direktori proyek ini:
+   ```bash
+   dotnet run
+   ```
+3. Gunakan menu interaktif di konsol untuk membuka rekening baru, login nasabah, setor, tarik, transfer dana, dan mencetak mutasi rekening.
