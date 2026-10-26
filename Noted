@@ -1,4 +1,19 @@
-Enums/ – Tipe-tipe enumerasi status dan akun.
-Models/ – Representasi objek data (OOP).
-Services/ – Logika bisnis dan transaksi bank.  
+#Enums/ – Tipe-tipe enumerasi status dan akun.
+=>AccountType: Savings, Current.
+=>TransactionType: Deposit, Withdrawal, TransferIn, TransferOut.
+
+#Models/ – Representasi objek data (OOP).
+=>customer: data nasabah
+=> Account: no rekeneing, riwayat transaksi, metode dasar dan abstrak
+=>transaction: ID Transaksi (GUID singkat), Waktu (DateTime.Now), Jenis, Nominal, Saldo Akhir, Catatan/Keterangan.
+=>SavingsAccount: Validasi saldo tidak boleh kurang dari saldo minimum (contoh: Rp 50.000).=>CurrentAccount: Penarikan diizinkan melebihi saldo hingga batas limit cerukan/overdraft (contoh: batas overdraft Rp 1.000.000).
+
+#Services/ – Logika bisnis dan transaksi bank.  
+
+
 UI/ – Antarmuka terminal interaktif nasabah.
+
+
+Deposit: Penambahan saldo dan pencatatan mutasi kredit.
+Withdraw: Penarikan dana sesuai tipe rekening dan pencatatan mutasi debit.
+Transfer: Transaksi dua arah yang aman (validasi ketersediaan saldo pengirim, penarikan dari rekening pengirim, dan penyetoran ke rekening penerima, dengan resi di kedua sisi).
