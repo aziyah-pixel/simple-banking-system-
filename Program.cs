@@ -64,7 +64,7 @@ internal class Program
         string pin;
         while (true)
         {
-            pin = ConsoleHelper.ReadPin("Buat PIN Keamanan (6 angka): ");
+            pin = ConsoleHelper.ReadPin("Buat PIN Keamanan (6 angka): ");//menyamarkan pin
             if (pin.Length >= 4)
             {
                 break;
@@ -97,7 +97,7 @@ internal class Program
         decimal minDeposit = type == AccountType.Savings ? 50_000m : 100_000m;
         decimal initialDeposit = ConsoleHelper.ReadDecimal($"Setoran Awal (Minimal Rp {minDeposit:N0}): ", min: minDeposit);
 
-        Account newAccount = _bankService.OpenAccount(fullName, phoneNumber, pin, type, initialDeposit);
+        Account newAccount = _bankService.OpenAccount(fullName, phoneNumber, pin, type, initialDeposit);//menampilkan no unik
 
         ConsoleHelper.Success("Rekening Nasabah Berhasil Dibuat!");
         Console.WriteLine(new string('-', 60));
